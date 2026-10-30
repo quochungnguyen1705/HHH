@@ -1,0 +1,6 @@
+{
+  "name": "AquaPump IoT - Điều Khiển Máy Bơm ESP32 MQTT",
+  "description": "Ứng dụng điều khiển 4 máy bơm nước, hẹn giờ bật tắt thông minh, giám sát điện áp và dòng điện thời gian thực từ ESP32 qua giao thức MQTT.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

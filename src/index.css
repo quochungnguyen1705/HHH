@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    min-height: 100vh;
+  }
+}
+
+/* Water Ripple Animation */
+@keyframes waterRipple {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.96);
+    opacity: 0.7;
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.animate-ripple {
+  animation: waterRipple 3s ease-in-out infinite;
+}
+
+.animate-gentle {
+  animation: gentlePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.8);
+}
